@@ -1,18 +1,13 @@
-import 'package:contacts/android/styles.dart';
-import 'package:contacts/android/views/home.view.dart';
-import 'package:contacts/android/views/splash.view.dart';
+import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:contacts/android/android.dart';
+import 'package:contacts/ios/ios.dart';
 
-void main() => runApp(AndroidApp());
-
-class AndroidApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Contacts',
-      debugShowCheckedModeBanner: false,
-      theme: androidTheme(),
-      home: HomeView(),
-    );
+void main() {
+  if (Platform.isIOS) {
+    runApp(IOSApp());
+  } else {
+    runApp(AndroidApp());
   }
 }
