@@ -1,17 +1,7 @@
+import 'package:contacts/ios/styles.dart';
 import 'package:flutter/cupertino.dart';
-import '../../ios/styles.dart';
 
-class SplashView extends StatefulWidget {
-  @override
-  _SplashViewState createState() => _SplashViewState();
-}
-
-class _SplashViewState extends State<SplashView> {
-  @override
-  initState() {
-    super.initState();
-  }
-
+class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

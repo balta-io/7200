@@ -1,6 +1,5 @@
 import 'package:contacts/android/views/address.view.dart';
 import 'package:contacts/android/views/editor-contact.view.dart';
-import 'package:contacts/android/views/take-picture.view.dart';
 import 'package:contacts/models/contact.model.dart';
 import 'package:flutter/material.dart';
 
@@ -21,9 +20,9 @@ class DetailsView extends StatelessWidget {
             width: double.infinity,
           ),
           Container(
-            padding: EdgeInsets.all(10),
             width: 200,
             height: 200,
+            padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Theme.of(context).primaryColor.withOpacity(0.1),
               borderRadius: BorderRadius.circular(200),
@@ -32,11 +31,11 @@ class DetailsView extends StatelessWidget {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
                 image: DecorationImage(
                   image:
                       NetworkImage("https://balta.io/imgs/andrebaltieri.jpg"),
                 ),
-                borderRadius: BorderRadius.circular(100),
               ),
             ),
           ),
@@ -93,14 +92,7 @@ class DetailsView extends StatelessWidget {
                 ),
               ),
               FlatButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => TakePictureView(),
-                    ),
-                  );
-                },
+                onPressed: () {},
                 color: Theme.of(context).primaryColor,
                 shape: CircleBorder(
                   side: BorderSide.none,

@@ -1,8 +1,8 @@
+import 'package:contacts/ios/views/address.view.dart';
 import 'package:contacts/ios/styles.dart';
 import 'package:contacts/ios/views/editor-contact.view.dart';
-import 'package:contacts/ios/views/address.view.dart';
+import 'package:contacts/models/contact.model.dart';
 import 'package:flutter/cupertino.dart';
-import '../../models/contact.model.dart';
 
 class DetailsView extends StatelessWidget {
   @override
@@ -98,7 +98,9 @@ class DetailsView extends StatelessWidget {
                     ),
                     CupertinoButton(
                       onPressed: () {},
-                      child: Icon(CupertinoIcons.mail),
+                      child: Icon(
+                        CupertinoIcons.mail,
+                      ),
                     ),
                     CupertinoButton(
                       onPressed: () {},
@@ -157,7 +159,7 @@ class DetailsView extends StatelessWidget {
                         child: Icon(
                           CupertinoIcons.location,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

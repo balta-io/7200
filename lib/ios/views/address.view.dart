@@ -1,5 +1,5 @@
+import 'package:contacts/ios/styles.dart';
 import 'package:flutter/cupertino.dart';
-import '../../ios/styles.dart';
 
 class AddressView extends StatelessWidget {
   @override

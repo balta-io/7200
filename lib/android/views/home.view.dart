@@ -7,6 +7,10 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text("Meus Contatos"),
+        centerTitle: true,
         leading: FlatButton(
           onPressed: () {},
           child: Icon(
@@ -14,10 +18,6 @@ class HomeView extends StatelessWidget {
             color: Theme.of(context).primaryColor,
           ),
         ),
-        title: Text("Meus Contatos"),
-        centerTitle: true,
-        elevation: 0,
-        backgroundColor: Colors.transparent,
       ),
       body: ListView(
         children: <Widget>[
@@ -26,20 +26,16 @@ class HomeView extends StatelessWidget {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(48),
                 image: DecorationImage(
                   image:
                       NetworkImage("https://balta.io/imgs/andrebaltieri.jpg"),
                 ),
-                borderRadius: BorderRadius.circular(64),
               ),
             ),
             title: Text("André Baltieri"),
             subtitle: Text("11 97222-7742"),
             trailing: FlatButton(
-              child: Icon(
-                Icons.chat,
-                color: Theme.of(context).primaryColor,
-              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -48,26 +44,28 @@ class HomeView extends StatelessWidget {
                   ),
                 );
               },
+              child: Icon(
+                Icons.chat,
+                color: Theme.of(context).primaryColor,
+              ),
             ),
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => EditorContactView(),
+            ),
+          );
+        },
         backgroundColor: Theme.of(context).primaryColor,
         child: Icon(
           Icons.add,
           color: Theme.of(context).accentColor,
         ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => EditorContactView(
-                model: null,
-              ),
-            ),
-          );
-        },
       ),
     );
   }

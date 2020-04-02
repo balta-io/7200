@@ -55,7 +55,7 @@ class AddressView extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              color: Colors.blue,
+              color: Colors.blue.withOpacity(0.2),
             ),
           ),
         ],

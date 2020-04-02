@@ -1,6 +1,6 @@
+import 'package:contacts/ios/views/editor-contact.view.dart';
 import 'package:contacts/ios/styles.dart';
 import 'package:contacts/ios/views/details.view.dart';
-import 'package:contacts/ios/views/editor-contact.view.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeView extends StatelessWidget {
@@ -19,9 +19,7 @@ class HomeView extends StatelessWidget {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
-                    builder: (context) => EditorContactView(
-                      model: null,
-                    ),
+                    builder: (context) => EditorContactView(),
                   ),
                 );
               },
@@ -52,7 +50,7 @@ class HomeView extends StatelessWidget {
                                   image: NetworkImage(
                                       "https://balta.io/imgs/andrebaltieri.jpg"),
                                 ),
-                                borderRadius: BorderRadius.circular(64),
+                                borderRadius: BorderRadius.circular(48),
                               ),
                             ),
                             Expanded(
@@ -98,10 +96,10 @@ class HomeView extends StatelessWidget {
                       ],
                     ),
                   ),
-                ),
+                )
               ],
             ),
-          )
+          ),
         ],
       ),
     );

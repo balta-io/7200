@@ -4,5 +4,10 @@ class ContactModel {
   String email;
   String phone;
 
-  ContactModel({this.id, this.name, this.email, this.phone});
+  ContactModel({
+    this.id,
+    this.name,
+    this.email,
+    this.phone,
+  });
 }

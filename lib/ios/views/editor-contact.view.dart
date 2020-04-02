@@ -1,5 +1,5 @@
+import 'package:contacts/models/contact.model.dart';
 import 'package:flutter/cupertino.dart';
-import '../../models/contact.model.dart';
 
 class EditorContactView extends StatelessWidget {
   final ContactModel model;
